@@ -1,144 +1,47 @@
-
+/* ==========================================
+   1. ĐỊNH DẠNG CƠ BẢN (CHO DI ĐỘNG / MẶC ĐỊNH)
+   ========================================== */
 body {
-    background-color: #dedede;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
 }
 
-h1 {
-    text-align: center;
-    font-family:Arial, sans-serif;
-    font-size: 32px;
+/* Kiểu mặc định cho các div và hình ảnh ở chế độ di động */
+div {
+  width: 100%;
+  margin-bottom: 20px;
 }
 
-a {
-    color: #000;
-    text-decoration: none;
-    font-family:Arial, sans-serif;
-}
-
-p {
-   font-size: 25px;
-   font-family:Arial, sans-serif;
-}
-
-img{
-  width:100%;
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 
-p{
-  text-align:center;
+/* ==========================================
+   2. TRUY VẤN PHƯƠNG TIỆN #1: MÁY TÍNH BẢNG (Từ 772px trở lên)
+   ========================================== */
+@media screen and (min-width: 772px) {
+  /* Thay đổi bố cục sao cho các div bằng 45% chiều rộng */
+  div {
+    width: 45%;
+    /* Thường mã gốc sẽ kết hợp float hoặc flex, bạn giữ nguyên hoặc thêm float: left; nếu cần thiết */
+  }
+  
+  /* Hình ảnh không quá 30% chiều cao của chế độ xem */
+  img {
+    max-height: 30%;
+  }
 }
 
-div img{
-    width:150px;
-    height: 150px;
-    display:block;
-    margin:auto;
+
+/* ==========================================
+   3. TRUY VẤN PHƯƠNG TIỆN #2: MÀN HÌNH LỚN (Từ 998px trở lên)
+   ========================================== */
+@media screen and (min-width: 998px) {
+  /* Thay đổi bố cục sao cho các div bằng 30% chiều rộng */
+  div {
+    width: 30%;
+  }
 }
-
-div{
-  display: inline-block;
-  width: 24%;
-  margin: 5px;
-  padding: 2px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 
-main {
-    border: 5px #000 solid;
-    margin: 10px;
-}
- */
-/* 
-
-.container {
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-items: center;
-}
- */
-/* img{
-    width: 200px;
-    height: 200px;
-    padding: 5px;
-} */
-
-/* .child {
-    position: relative;
-    display: inline-block;
-    border: 5px black solid;
-    margin: 5px;
-    border-radius: 5px;
-} */
-
-/* 
-
-.label {
-    display: none;
-    position: absolute;
-    top: 40%;
-    left: 40%;
-} */
-/* 
-.button {
-    display: inline-block;
-    border: 2px solid #000;
-    padding: 5px;
-    border-radius: 25px;
-}
- */
-/* 
-.button:hover {
-    background-color:#fff;
-} */
-
-/* 
-footer {
-    display: flex;
-    justify-content: center;
-} */
-
-/* 
-header {
-    border-radius: 5px;
-    border: 5px #000 solid;
-    margin: 10px;
-} */
-
-/* 
-.label {
-    display: none;
-    position: absolute;
-    top: 40%;
-    left: 40%;
-} */
-/* 
-.child:hover .label {
-    display: block;
-} */
